@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yelpdemo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<a href="/pages/about">About</a>
+<a href="/pages/contact">Contact</a>
+
+<%= yield %>
+<p>Copyright blah blah</p>
+</body>
+</html>
