@@ -10,10 +10,11 @@
 <body>
 <!-- renders navbar partial into page -->
 <%= render 'layouts/navbar' %>
-
+    <div class="container-fluid">
 <%= yield %>
 
 <!-- renders footer partial into page -->
 <%= render 'layouts/footer' %>
+    </div>
 </body>
 </html>
