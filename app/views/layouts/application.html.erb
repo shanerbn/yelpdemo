@@ -5,20 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<%= render 'layouts/bootstrap' %>
 </head>
 <body>
-<a href="/pages/about">About</a>
-<a href="/pages/contact">Contact</a>
+<!-- renders navbar partial into page -->
+<%= render 'layouts/navbar' %>
 
 <%= yield %>
-<p>Copyright blah blah</p>
+
+<!-- renders footer partial into page -->
+<%= render 'layouts/footer' %>
 </body>
 </html>
