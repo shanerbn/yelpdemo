@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+#ignore AWS settings
+#/carrierwave.rb
+# Ignore application configuration
+/config/application.yml
