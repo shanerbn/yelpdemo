@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
 gem 'rails', '4.2.0'
 gem 'sqlite3', group: :development
 gem 'sass-rails', '~> 5.0'
@@ -16,6 +15,7 @@ gem 'carrierwave'
 gem 'figaro'
 gem 'fog'
 gem 'mini_magick'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
