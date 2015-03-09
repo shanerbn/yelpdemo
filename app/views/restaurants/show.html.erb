@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-<%= image_tag @restaurant.image_url %>
+<%= link_to (image_tag @restaurant.image_url), @restaurant.website, target: "blank" %>
 <!-- renders the image by each restaurant -->
-<p>
+<p><br>
   <strong>Name:</strong>
   <%= @restaurant.name %>
 </p>
@@ -19,7 +17,7 @@
 
 <p>
   <strong>Website:</strong>
-  <%= @restaurant.website %>
+  <%= link_to (@restaurant.website), @restaurant.website, target: "blank" %>
 </p>
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant), class:"btn btn-link" %> |
