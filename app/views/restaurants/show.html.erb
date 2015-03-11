@@ -1,28 +1,42 @@
-<%= link_to (image_tag @restaurant.image_url), @restaurant.website, target: "blank" %>
-<!-- renders the image by each restaurant -->
-<p><br>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
-</p>
+<div class="row">
+  <div class="col-md-3">
+    <%= link_to (image_tag @restaurant.image_url), @restaurant.website, target: "blank" %>
+    <!-- renders the image by each restaurant -->
+    <h2>
+      <%= @restaurant.name %>
+    </h2>
 
-<p>
-  <strong>Address:</strong>
-  <%= @restaurant.address %>
-</p>
+    <p>
+      <strong>Address:</strong>
+      <%= @restaurant.address %>
+    </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @restaurant.phone %>
-</p>
+    <p>
+      <strong>Phone:</strong>
+      <%= @restaurant.phone %>
+    </p>
 
-<p>
-  <strong>Website:</strong>
-  <%= link_to (@restaurant.website), @restaurant.website, target: "blank" %>
-</p>
+    <p>
+      <strong>Website:</strong>
+      <%= link_to (@restaurant.website), @restaurant.website, target: "blank" %>
+    </p>
 
-<!--<p>-->
-  <!--<strong>Reviews</strong>-->
-<!--</p>-->
-<%= link_to 'Write Rewview', new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+
+    <%= link_to 'Write Rewview', new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+
+  </div>
+
+  <div class="col-md-9">
+    <% if @reviews.blank? %>
+        <h3>No reviews yet, be the first to write one!</h3>
+        <% else %>
+                <% @reviews.each do |review| %>
+            <p><%= review.rating %></p>
+            <p><%= review.comment %></p>
+        <% end %>
+        <% end %>
+</div>
+</div>
+
 <%= link_to 'Edit', edit_restaurant_path(@restaurant), class:"btn btn-link" %> |
 <%= link_to 'Back', restaurants_path, class:"btn btn-link" %>
