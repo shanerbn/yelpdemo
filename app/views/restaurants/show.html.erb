@@ -44,7 +44,7 @@
 <script>
     $('star-rating').raty({
         path: 'https://s3.amazonaws.com/yelping/stars',
-        readOnly: true;
+        readOnly: true,
         score: function() {
             return $(this).attr('data-score');
         }
