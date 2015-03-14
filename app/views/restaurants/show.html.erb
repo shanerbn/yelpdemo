@@ -39,7 +39,7 @@
                <tr>
                  <td>
                    <div class="star-rating" data-score= <%= review.rating %> ></div>
-                   <p><%= review.comment %></p>
+                   <p><%= h(review.comment).gsub(/\n/, '<br/>').html_safe %></p>
                    </td>
                    </tr>
                <% end %>
